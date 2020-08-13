@@ -11,8 +11,8 @@ metadata:
     some-label: some-label-value
 spec:
   containers:
-  - name: bash
-    image: bash
+  - name: maven
+    image: maven
     command:
     - cat
     tty: true
@@ -22,7 +22,7 @@ spec:
     stages {
         stage('Run maven') {
             steps {
-                container('bash') {
+                container('maven') {
                     sh '''#!/bin/bash
                     echo "hello world"
                     '''
