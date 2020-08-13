@@ -29,7 +29,7 @@ spec:
             steps {
                 container('maven') {
                     sh '''
-                    echo "hello world"
+                    create_master.sh $MasterName
                     '''
                 }
             }
