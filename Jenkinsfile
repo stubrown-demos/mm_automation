@@ -19,6 +19,11 @@ spec:
 """
         }
     }
+    parameters {
+        string(name: 'MasterName', defaultValue: '', description: 'master to create')
+
+
+    }
     stages {
         stage('Run maven') {
             steps {
