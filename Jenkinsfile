@@ -22,7 +22,7 @@ spec:
     stages {
         stage('Run maven') {
             steps {
-                container('maven') {
+                container('busybox') {
                     sh '''#!/bin/bash
                     echo "hello world"
                     '''
