@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
   - name: busybox
-    image: busybox
+    image: bash
     command:
     - cat
     tty: true
@@ -22,7 +22,7 @@ spec:
     stages {
         stage('Run maven') {
             steps {
-                container('busybox') {
+                container('bash') {
                     sh '''#!/bin/bash
                     echo "hello world"
                     '''
