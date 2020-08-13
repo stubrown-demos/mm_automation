@@ -11,7 +11,7 @@ metadata:
     some-label: some-label-value
 spec:
   containers:
-  - name: busybox
+  - name: bash
     image: bash
     command:
     - cat
