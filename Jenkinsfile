@@ -23,7 +23,7 @@ spec:
         stage('Run maven') {
             steps {
                 container('maven') {
-                    sh '''#!/bin/bash
+                    sh '''
                     echo "hello world"
                     '''
                 }
