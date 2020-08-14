@@ -28,9 +28,11 @@ spec:
         stage('Run maven') {
             steps {
                 container('maven') {
-                    sh '''
-                    ./scripts/create_master/create_master.sh $MasterName
-                    '''
+                    withCredentials([usernamePassword(credentialsId: jcred, passwordVariable: 'jpassword', usernameVariable: 'juser')]) {
+                        sh '''
+                        ./scripts/create_master/create_master.sh ${MasterName} ${jpassword} ${juser}
+                        '''
+                    }
                 }
             }
         }

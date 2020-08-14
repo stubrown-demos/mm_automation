@@ -1,6 +1,6 @@
 reqMasterName=$1
-USER=admin
-TOKEN=<>
+USER=$2
+TOKEN=$3
 CJOC_URL=https://core.general.flow-training.beescloud.com/cjoc
 sed "s/MASTERNAME/$reqMasterName/" createManagedMasterK8s.groovy.template > createManagedMasterK8s.groovy
 curl -v -XPOST \
