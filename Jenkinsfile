@@ -30,7 +30,7 @@ spec:
                 container('maven') {
                     withCredentials([usernamePassword(credentialsId: 'jcred', passwordVariable: 'jpassword', usernameVariable: 'juser')]) {
                         sh '''
-                        ./scripts/create_master/create_master.sh ${MasterName} ${jpassword} ${juser}
+                        ./scripts/create_master/create_master.sh ${MasterName} ${juser} ${jpassword}
                         '''
                     }
                 }
