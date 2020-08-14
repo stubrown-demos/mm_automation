@@ -29,7 +29,7 @@ spec:
             steps {
                 container('maven') {
                     sh '''
-                    ./create_master.sh $MasterName
+                    ./scripts/create_master/create_master.sh $MasterName
                     '''
                 }
             }
